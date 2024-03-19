@@ -17,7 +17,8 @@
 
 3.Admin Girişi:
 
-![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/0bc1f83d-5f56-4f55-814d-db77fefa7485)
+![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/f8e00da8-03fd-4d81-b19b-7f522d3aa8a2)
+
 
 
 4. User Girişi:
