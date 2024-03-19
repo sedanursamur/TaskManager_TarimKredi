@@ -2,7 +2,7 @@
 ## Task Manager Uygulaması
 ### Genel Amacı
 * Bir veya birden fazla yönetici, çalışanlarının ilgili ünvanları ve bilgileri ile kayıt edip, çalışanlarına ortak olarak yapılması gereken tasklerin paylaşıldığı ve çalışanların ise bu taskleri alıp, açıklaması ile tamamlayıp yöneticilerin tamamlanan task detaylarını görmeye yarayan iş yönetim sistemidir.
-* Uygulama ilk açıldığında kullanıcı adı ve şifresi "admin" olan bir yönetici tanımlanıyor. Yönetici yeni kullanıcılar ekleyebilir, oluşturulan yeni kullanıcı şifresi default olarak ismidir. Ayrıca local veritabanınızda "TaskManager_TarimKredi" adında bir veritabanı oluşturup oluşturduğum migrationı veritabanınıza yansıtabilirsiniz.
+* Uygulama ilk açıldığında kullanıcı adı "admin2" ve şifresi "admin" olan bir yönetici tanımlanıyor. Yönetici yeni kullanıcılar ekleyebilir, oluşturulan yeni kullanıcı şifresi default olarak ismidir. Ayrıca local veritabanınızda "TaskManager_TarimKredi" adında bir veritabanı oluşturup oluşturduğum migrationı veritabanınıza yansıtabilirsiniz.
 *_Uygulama detayını aşağıda görsellerle açıklamaya çalışacağım._
 
 1. Default Index Ekranı :
