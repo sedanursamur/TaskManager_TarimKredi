@@ -1,0 +1,80 @@
+﻿@model List<AppTaskListDto>
+
+@{
+    int count = 0;
+}
+
+@{
+    <h3 class="text-center">Bekleyen Tasklar</h3>
+
+    if (Model.Count != 0)
+    {
+
+        <table class="table my-3">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Başlık</th>
+                    <th scope="col">Görev Tanımı</th>
+                    <th scope="col">Aciliyet</th>
+                    <th scope="col">İş Durumu</th>
+                    <th scope="col">Oluşturulma Zamanı</th>
+                    <th scope="col">Son Teslim Zamanı</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@(++count)</td>
+                        <td>@item.Title</td>
+                        <td>@item.Defination</td>
+                        <td>
+                         @switch (item.PriortryId)
+                           {
+                      case 1:
+                        <span>Düşük</span>
+                        break;
+                      case 2:
+                        <span>Orta</span>
+                        break;
+                      case 3:
+                       <span>Yüksek</span> 
+                        break;
+                      case 4:
+                       <span>Kritik</span>
+                        break;
+                      default:
+                       <span>Bilinmiyor</span>
+                        break;
+                          }
+                        </td>
+                        <td>@item.Defination</td>
+                        <td>@item.CreatedTime</td>
+                        <td>@item.EndDateTime</td>
+                        <td>
+                            <a asp-action="Update" asp-controller="Admin" asp-route-id="@item.Id" class="btn btn-primary">Güncelle</a>
+                        </td>
+                        <td>
+                            <a onclick="confirmDelete(@item.Id)" class="btn btn-danger">Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p class="text-center">Aktif Görev Bulunmamaktadır.</p>
+    }
+}
+
+<script>
+    function confirmDelete(id) {
+        if (confirm('Bu öğeyi silmek istediğinizden emin misiniz?')) {
+            window.location.href = '/Admin/Remove/' + id;
+        }
+    }
+</script>

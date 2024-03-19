@@ -1,0 +1,8 @@
+﻿@using System.Security.Claims
+
+@{
+    Layout = "_Layout";
+    int userId = int.Parse(User.Claims.Where(x => x.Type == ClaimTypes.NameIdentifier).SingleOrDefault().Value);
+}
+<h3 class="text-center">Görevlerim</h3>
+@await Component.InvokeAsync("UserTasksComponent",userId)

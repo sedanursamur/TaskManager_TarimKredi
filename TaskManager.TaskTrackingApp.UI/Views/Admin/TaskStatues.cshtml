@@ -1,0 +1,56 @@
+﻿@model List<AppUserTaskListDto>
+@{
+    Layout = "_Layout";
+    int counter = 0;
+    int count = 0;
+}
+
+<p>@ViewBag.Message</p>
+
+@await Component.InvokeAsync("TasksComponent")
+
+
+
+
+<h3 class="text-center">Görev Durumları</h3>
+
+
+<table class="table my-3">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Görevi Alan Kullanıcı Adı</th>
+            <th scope="col">Başlık</th>
+            <th scope="col">Görev Tanımı</th>
+            <th scope="col">Aciliyet</th>
+            <th scope="col">İş Durumu</th>
+            <th scope="col">Oluşturulma Zamanı</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(++counter)</td>
+                <td>@item.AppUser.Username</td>
+                <td>@item.AppTask.Title</td>
+                <td>@item.AppTask.Defination</td>
+                <td>@item.AppTask.Priortry.Defination</td>
+                <td>@item.TaskStatus.Defination</td>
+                <td>@item.AppTask.CreatedTime.ToString("MM/dd/yyyy HH:mm")</td>
+                @{
+                    if (item.TaskStatus.Id == (int)TaskStatusType.GorevAlındı)
+                    {
+                            <td><a class="btn text-white btn-warning">Devam Ediyor</a></td>
+
+                    }
+                    else if (item.TaskStatus.Id == (int)TaskStatusType.Tamamlandı)
+                    {
+                            <td><a asp-action="TaskDetail" asp-controller="Admin" asp-route-id=@item.Id class="btn text-white btn-primary">Detay Gör</a></td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>

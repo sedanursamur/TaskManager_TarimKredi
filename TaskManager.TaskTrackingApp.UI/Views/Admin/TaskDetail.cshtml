@@ -1,0 +1,19 @@
+﻿@model AppUserTaskListDto
+@{
+    Layout = "_Layout";
+}
+<h3 class="text-center">Proje Detayı</h3>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-6"><b>Projeyi Tamamlayan :</b> @Model.AppUser.FirstName @Model.AppUser.LastName</div>
+        <div class="col-6"><b>Açıklama :</b> @Model.CompleteDocumentDefination </div>
+
+    </div>
+    <div class="row pt-2">
+        <div class="col-6"><b>Proje Başlığı:</b> @Model.AppTask.Title</div>
+     
+    </div>
+    <div class="row">
+        <div class="col-6"><b>Görev Tanımı :</b> @Model.AppTask.Defination</div>
+    </div>
+</div>

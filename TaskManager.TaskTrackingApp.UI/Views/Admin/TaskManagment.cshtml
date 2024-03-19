@@ -1,0 +1,40 @@
+﻿@model AppTaskCreateModel
+@{
+    Layout = "_Layout";
+}
+<h3 class="text-center">Task Oluştur</h3>
+<div class="container">
+    <form asp-action="CreateTask" asp-controller="Admin" method="post" class="mt-2">
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <label class="form-label">Başlık:</label>
+            <input asp-for="@Model.Title" type="text" class="form-control" />
+        </div>
+
+        <div class="form-outline mb-4">
+            <label class="form-label">Açıklama:</label>
+            <input asp-for="@Model.Defination" type="text" class="form-control" />
+        </div>
+
+        <div class="form-outline mb-4">
+            <label class="form-label">Son Teslim Tarihi:</label>
+            <input asp-for="@Model.EndDateTime" type="date"  class="form-control" />
+        </div>
+
+        <div class="form-outline mb-4">
+            <label class="form-label">Öncelik:</label>
+            <select class="form-control" asp-for="@Model.PriortryId" asp-items="@Model.PriortrySelectList">
+            </select>
+        </div>   
+        <div class="form-outline mb-4">
+            <label class="form-label">Atanan Kişi:</label>
+            <select class="form-control" asp-for="@Model.AppUserId" asp-items="@Model.UserList">
+            </select>
+        </div>
+     
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-success btn-block mb-4">Oluştur</button>
+
+    </form>
+</div>

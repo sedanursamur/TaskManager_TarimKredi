@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "_Layout";
+    int count = 0;
+    //DateTime? data = Model.CompletedTaskDate;
+    //string date = data.ToString("MM/dd/yyyy hh:mm tt");
+
+    // BU GELİŞTİRMEYE SONRA DEVAM EDECEĞİM 
+}
+
+@model AppUserTaskListDto
+
+<p>@Model.AppTask.Title</p>
+<p>@Model.AppTask.Defination</p>
+<p>@Model.CompleteDocumentDefination</p>
+
+<p><a clas="btn btn-success" href="/Files/@Model.DocumentPath">Belgeyi indir.</a></p>
+<p>@Model.CompletedTaskDate</p>
+
+
+
+<table class="table my-3">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Başlık</th>
+            <th scope="col">Görev Tanımı</th>
+            <th scope="col">Tamamlama Notları</th>
+            <th scope="col">Belge</th>
+            <th scope="col">Tamamlanma Zamanı</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@(++count)</td>
+            <td>@Model.AppTask.Title</td>
+            <td>@Model.AppTask.Defination</td>
+            <td>@Model.CompleteDocumentDefination</td>
+            <td><a clas="btn btn-success" href="/Files/@Model.DocumentPath">Belgeyi indir.</a></td>
+            <td>@Model.CompletedTaskDate</td>
+        </tr>
+    </tbody>
+</table>

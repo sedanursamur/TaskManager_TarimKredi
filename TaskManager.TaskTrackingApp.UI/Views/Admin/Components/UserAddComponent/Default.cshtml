@@ -1,0 +1,38 @@
+﻿@model AppUserCreateModel
+
+<h4 class="text-center">Kullanıcı Ekle</h4>
+<div class="container">
+    <form asp-controller="Admin" asp-action="CreateUser" method="post" class="mt-2">
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <label class="form-label">Çalışan Adı</label>
+            <input asp-for="@Model.FirstName" type="text" class="form-control" />
+         
+        </div>
+
+        <div class="form-outline mb-4">
+            <label class="form-label">Çalışan Soyadı</label>
+            <input asp-for="@Model.LastName" type="text" class="form-control" />
+            
+        </div>
+
+        <div class="form-outline mb-4">
+            <label class="form-label">Çalışan Kullanıcı Adı</label>
+            <input asp-for="@Model.Username" type="text" class="form-control" />
+           
+        </div>
+
+        <div class="form-outline mb-4">
+            <label class="form-label">Çalışan Email</label>
+            <input asp-for="@Model.Email" type="text" class="form-control" />
+           
+        </div>
+        <label class="form-label">Çalışan Rolü:</label>
+        <select class="form-control" asp-for="@Model.DegreeId" asp-items="@Model.DegreeSelectList" class="form-select" aria-label="Default select example">
+
+        </select>
+        <br>
+        <button type="submit" class="btn btn-primary btn-block mb-4">Ekle</button>
+
+    </form>
+</div>

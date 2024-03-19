@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model AppTaskUpdateModel   
+<h3 class="text-center">Task Güncelle</h3>
+<div class="container">
+    <form asp-action="Update" asp-controller="Admin"  class="mt-2">
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <label class="form-label">Başlık:</label>
+            <input asp-for="@Model.Title" type="text" class="form-control" />
+        </div>
+
+        <div class="form-outline mb-4">
+            <label class="form-label">Açıklama:</label>
+            <input asp-for="@Model.Defination" type="text" class="form-control" />
+        </div>
+
+        <div class="form-outline mb-4">
+            <label class="form-label">Son Teslim Tarihi:</label>
+            <input asp-for="@Model.EndDateTime" type="date" class="form-control" />
+        </div>
+
+        <div class="form-outline mb-4">
+            <select class="form-control" asp-for="@Model.PriortryId" asp-items="@Model.PriortrySelectList">
+            </select>
+        </div>
+        <input hidden asp-for="@Model.CreatedTime" />
+
+        <input hidden asp-for="@Model.IsActive" />
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-success btn-block mb-4">Güncelle</button>
+
+    </form>
+</div>

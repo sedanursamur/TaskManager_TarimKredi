@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TaskManager.TaskTrackingApp.Common\TaskManager.TaskTrackingApp.Common.csproj" />
+    <ProjectReference Include="..\TaskManager.TaskTrackingApp.DataAccess\TaskManager.TaskTrackingApp.DataAccess.csproj" />
+    <ProjectReference Include="..\TaskManager.TaskTrackingApp.Dtos\TaskManager.TaskTrackingApp.Dtos.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>

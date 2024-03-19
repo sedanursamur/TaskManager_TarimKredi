@@ -1,0 +1,72 @@
+﻿﻿@{
+    Layout = "_Layout";
+    int count = 1;
+    string username = String.Empty;
+    foreach (var item in User.Claims)
+    {
+        username = item.Value;//Cookiede tutulan username değeri
+        break;
+    }
+}
+@model List<AppTaskListDto>
+
+<h3 class="text-center">Aktif Görevler</h3>
+@if (Model.Count != 0)
+{
+
+    <table class="table my-3">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Başlık</th>
+                <th scope="col">Görev Tanımı</th>
+                <th scope="col">Aciliyet</th>
+                <th scope="col">Oluşturulma Zamanı</th>
+                @if (User.IsInRole("User"))
+                {
+                    <th></th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@(count++)</td>
+                    <td>@item.Title</td>
+                    <td>@item.Defination</td>
+                    <td>@item.Priortry.Defination</td>
+                    <td>@item.CreatedTime</td>
+                    @if (User.IsInRole("Admin") || User.IsInRole("User"))
+                    {
+                        <td><a id="TakeTaskBtn" asp-action="AcceptTask" asp-controller="User" asp-route-taskId="@item.Id" asp-route-userName="@username" class="btn btn-primary btn-sm d-none ">Görev Al</a></td>
+                        <td><button id="FakeBtn" onclick="tıkla(@count)" class="btn btn-primary btn-sm ">Görev Al</button></td>
+                        <td><a asp-action="Update" asp-controller="Admin" asp-route-id="@item.Id" class="btn btn-primary">Güncelle</a></td>
+                    }
+                 
+                       
+                       
+                    
+              
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    @section Scripts
+    {
+    <script>
+        var btn = document.querySelectorAll("#TakeTaskBtn");
+        const tıkla = (index) => {
+            if (confirm("Emin misiniz ?")) {
+                console.log(index - 2);//index değerini baz almak için counterdan 2 çıkarıyourm
+                btn[index - 2].click();
+            }
+        }
+    </script>
+    }
+}
+else
+{
+    <p class="text-center">Aktif bir görev bulunmamaktadır.</p>
+}

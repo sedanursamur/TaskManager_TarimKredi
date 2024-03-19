@@ -1,0 +1,32 @@
+﻿@model List<AppUserListDto>
+@{
+    Layout = "_Layout";
+    int counter = 0;
+}
+<a asp-action="CreateUser" asp-controller="Admin" class="btn btn-sm btn-success float-right">Kullanıcı Oluştur</a>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Ad</th>
+            <th scope="col">Soyad</th>
+            <th scope="col">Kullanıcı Adı</th>
+            <th scope="col">Rolü</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(++counter)</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Username</td>
+                <td>@item.Degree.Defination</td>
+                <td>@item.Email</td>             
+            </tr>
+        }
+    </tbody>
+</table>
