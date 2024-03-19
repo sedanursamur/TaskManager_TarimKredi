@@ -7,44 +7,54 @@
 
 1. Default Index Ekranı :
    
- ![image](https://github.com/sedanursamur/TaskManager/assets/81965223/73826b6c-f945-4737-ab7b-28bbb528a50d)
+ ![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/04475f62-f38e-4652-9039-836bfa76130a)
+
 
 2.Giriş Ekranı:
 
-![image](https://github.com/sedanursamur/TaskManager/assets/81965223/9a43ee07-a8a3-4044-9220-472ab0e96b48)
+![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/74518737-ab2e-40c7-be44-a3bc22341f53)
+
 
 3.Admin Girişi:
 
-![image](https://github.com/sedanursamur/TaskManager/assets/81965223/942823cc-ca0a-4bdf-ad70-38368036ae1b)
+![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/0bc1f83d-5f56-4f55-814d-db77fefa7485)
+
 
 4. User Girişi:
    
-![image](https://github.com/sedanursamur/TaskManager/assets/81965223/683d3b90-5d31-4654-b10f-098d0b68acd0)
+![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/7774711b-17f6-4484-98f9-294f94f56ec1)
+
    
 5. Kullanıcı İşlemleri Ekranı:
 
- ![image](https://github.com/sedanursamur/TaskManager/assets/81965223/f99e09aa-8fee-461b-9e82-16902d832a0b)
+ ![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/f931b34a-29af-4b79-9b9b-f1384a596090)
+
 
 
 6. Kullanıcı oluşturma Ekranı:
 
-![image](https://github.com/sedanursamur/TaskManager/assets/81965223/917362a7-875c-4cc7-9ec4-cb7622daf3dd)
+![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/2de1989f-1aad-4f4e-b8fa-c58a867317b6)
+
 
 7. Task İşlemleri Ekranı:
 
-![image](https://github.com/sedanursamur/TaskManager/assets/81965223/454039d3-b761-42ce-87f8-6b8b0b474447)
+![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/014e0a83-4b41-4159-9335-c40d1bf3ee1e)
+
 
 8. Adminin Task Durumlarını Gördüğü ve Yönettiği Ekran:
 
-![image](https://github.com/sedanursamur/TaskManager/assets/81965223/7c399c34-3d80-4745-af8d-49c8710d3172)
+![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/7040d2a0-2b3e-4f1e-be39-bd8dc7f5f43b)
+
 
 9. Tasklarım Ekranı:
 
-![image](https://github.com/sedanursamur/TaskManager/assets/81965223/aa515206-6281-45ed-a4d6-40d6d9691577)
+![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/76a43657-26ab-45fd-bda7-58101a0c4f25)
+
 
 10. Görev Tamamlama Ekranı:
 
-![image](https://github.com/sedanursamur/TaskManager/assets/81965223/dd17daa2-ffa2-4f7d-a9e8-55c28c71c0af)
+![image](https://github.com/sedanursamur/TaskManager_TarimKredi/assets/81965223/d2b6727c-9fb3-4afd-b0ae-7644f9d65fec)
+
 
 
 
